@@ -88,16 +88,16 @@ function showQuestion() {
 }
 function chooseOption(e, correctAns) {
   let userAns = e.target.innerHTML;
-  let option=document.getElementsByClassName("option")
-  for(let i=0;i<option.length;i++){
+  let option = document.getElementsByClassName("option");
+  for (let i = 0; i < option.length; i++) {
     option[i].style.pointerEvents = "none";
+    if (option[i].innerHTML == correctAns) {
+      option[i].style.backgroundColor = "#D1E7DD";
+    }
   }
   if (userAns == correctAns) {
     e.target.style.backgroundColor = "#D1E7DD";
-    
   } else {
     e.target.style.backgroundColor = "#F8D7DA";
-
   }
-  
 }
