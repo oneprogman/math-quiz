@@ -5,21 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Math Quiz</title>
-    <script src="app.js"></script>
+    
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="container">
       <div class="quizWrapper">
-        <div class="top">
-          <button class="btn btn-primary" onclick="showQuestion()">
-            Generate!
-          </button>
-          <h1>Our Quiz game</h1>
+        <div class="quesCount" id="quesCount">
+          <h1>how many ques do you want?</h1>
+          <div>
+            <input class="input" id="inputQty" type="number" required /><button class="btn primary" id="quesQty">Get Started!</button>
+          </div>
         </div>
-        <h2 class="ques" id="myQuestion"></h2>
-        <div class="optionWrapper" id="option"></div>
+        <div class="quesBox" id="quesBox">
+          <div class="top">
+            <!-- <button class="btn btn-primary" onclick="showQuestion()">
+              Generate!
+            </button> -->
+            <h1>Our Quiz game</h1>
+          </div>
+          <h2 class="ques" id="myQuestion"></h2>
+          <div class="optionWrapper" id="option"></div>
+          <div class="bottom" id="bottom"><div class="count" id="counter"></div><button id="next" class="btn primary">Next Ques</button></div>
+        </div>
       </div>
     </div>
+    <script src="app.js"></script>
   </body>
 </html>
